@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram Page</title>
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      #stories {
+        overflow-x: scroll;
+        white-space: nowrap;
+      }
+      #sideLinks .col-1 {
+        display: inline-block;
+      }
+      #switchContainer {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 1000;
+      }
+      .switch {
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+      }
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      .slider {
+        position: relative;
+        cursor: pointer;
+        width: 60px;
+        height: 34px;
+        background-color: #ccc;
+        border-radius: 34px;
+        transition: .4s;
+      }
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        border-radius: 50%;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        transition: .4s;
+      }
+      input:checked + .slider {
+        background-color: #2196F3;
+      }
+      input:checked + .slider:before {
+        transform: translateX(26px);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="switchContainer">
+      <label class="switch">
+        <input type="checkbox" id="themeSwitch">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="row" id="container">
+      <div id="sideNav" class="col-md-1 p-2">
+        <div class="logoContainer">
+          <img src="instagram.jpeg" class="img-fluid p-0" alt="Instagram Logo">
+        </div>
+        <hr>
+        <div class="options" id="lists">
+          <ul class="list-group">
+            <a href="#" class="list-group-item bg-secondary">Home</a>
+            <a href="#" class="list-group-item">Feed</a>
+            <a href="#" class="list-group-item">Reels</a>
+            <a href="#" class="list-group-item">Explore</a>
+            <a href="#" class="list-group-item">Profile</a>
+            <a href="#" class="list-group-item">Items</a>
+          </ul>
+        </div>
+      </div>
+
+      <div id="feed" class="col-md-8">
+        <div id="stories">
+          <div class="d-flex" id="sideLinks">
+            <div class="col-1 p-1 d-flex">
+              <img src="stories.jpeg" class="img-fluid" alt="">
+            </div>
+            <div class="col-1 p-2">
+              <img src="stories.jpeg" class="img-fluid" alt="">
+            </div>
+            <div class="col-1 p-2">
+              <img src="stories.jpeg" class="img-fluid" alt="">
+            </div>
+            <div class="col-1 p-2">
+              <img src="stories.jpeg" class="img-fluid" alt="">
+            </div>
+            <div class="col-1 p-2">
+              <img src="stories.jpeg" class="img-fluid" alt="">
+            </div>
+            <div class="col-1 p-2">
+              <img src="stories.jpeg" class="img-fluid" alt="">
+            </div>
+            <div class="col-1 p-2">
+              <img src="stories.jpeg" class="img-fluid" alt="">
+            </div>
+            <div class="col-1 p-2">
+              <img src="stories.jpeg" class="img-fluid" alt="">
+            </div>
+            <div class="col-1 p-2">
+              <img src="stories.jpeg" class="img-fluid" alt="">
+            </div>
+            <div class="col-1 p-2">
+              <img src="stories.jpeg" class="img-fluid" alt="">
+            </div>
+            <div class="col-1 p-2">
+              <img src="stories.jpeg" class="img-fluid" alt="">
+            </div>
+            <div class="col-1 p-2">
+              <img src="stories.jpeg" class="img-fluid" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="posts">
+          <div class="card" id="feedsImg">
+            <div class="card-header d-flex align-items-center">
+              <img src="cr7.jpeg" height="50" alt="profileimg" class="mr-2">
+              <div class="user-ID">
+                <h5>cristiano</h5>
+                <p class="text-muted">@Suiii</p>
+              </div>
+            </div>
+            <div class="card-body" id="feedsImg">
+              <img src="cr7.jpeg" class="img-fluid" alt="" height="500px">
+            </div>
+            <div class="card-footer">
+              <p>like share comment</p>
+            </div>
+          </div>
+          <div class="card" id="feedsImg">
+            <div class="card-header d-flex align-items-center">
+              <img src="cr7.jpeg" height="50" alt="profileimg" class="mr-2">
+              <div class="user-ID">
+                <h5>cristiano</h5>
+                <p class="text-muted">@Suiii</p>
+              </div>
+            </div>
+            <div class="card-body" id="feedsImg">
+              <img src="cr7.jpeg" class="img-fluid" alt="" height="500px">
+            </div>
+            <div class="card-footer">
+              <p>like share comment</p>
+            </div>
+          </div>
+          <div class="card" id="feedsImg">
+            <div class="card-header d-flex align-items-center">
+              <img src="cr7.jpeg" height="50" alt="profileimg" class="mr-2">
+              <div class="user-ID">
+                <h5>cristiano</h5>
+                <p class="text-muted">@Suiii</p>
+              </div>
+            </div>
+            <div class="card-body" id="feedsImg">
+              <img src="cr7.jpeg" class="img-fluid" alt="" height="500px">
+            </div>
+            <div class="card-footer">
+              <p>like share comment</p>
+            </div>
+          </div>
+          <div class="card" id="feedsImg">
+            <div class="card-header d-flex align-items-center">
+              <img src="cr7.jpeg" height="50" alt="profileimg" class="mr-2">
+              <div class="user-ID">
+                <h5>cristiano</h5>
+                <p class="text-muted">@Suiii</p>
+              </div>
+            </div>
+            <div class="card-body" id="feedsImg">
+              <img src="cr7.jpeg" class="img-fluid" alt="" height="500px">
+            </div>
+            <div class="card-footer">
+              <p>like share comment</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="suggestions" class="col-md-2 p-0">
+        <div class="rightNav d-flex mb-3">
+          <img src="cr7.jpeg" height="50" alt="loginPic">
+          <div class="userName mt-2 ml-2">
+            <h5>cristiano</h5>
+            <p class="text-muted">@Suii</p>
+          </div>
+        </div>
+
+        <div class="rightNav d-flex mb-3">
+          <img src="cr7.jpeg" height="50" alt="profilePic2">
+          <div class="userName mt-2 ml-2">
+            <h5>leo</h5>
+            <p class="text-muted">@cris</p>
+          </div>
+        </div>
+        <div class="rightNav d-flex mb-3">
+          <img src="cr7.jpeg" height="50" alt="profilePic3">
+          <div class="userName mt-2 ml-2">
+            <h5>neymar</h5>
+            <p class="text-muted">@Jr</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
